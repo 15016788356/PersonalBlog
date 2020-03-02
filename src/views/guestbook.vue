@@ -1,61 +1,24 @@
 <template>
-    <div class="about">
+    <div class="guestbook">
         <BHeader></BHeader>
         <div class="content">
             <div class="content_left">
                 <div class="description">
-                    <div class="about_title">关于我</div>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <div class="about_title">关于博客</div>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
-                    <p>NodeNodeNodeNode</p>
+                    <p>欢迎灌水交流，别看我长时间不发博，博主可一直都在线~</p>
+                    <p style="color: red;">友链只交换技术类个人博客。</p>
+                    <p style="color: red;">不要皮，谢谢</p>
                 </div>
-                <div class="blog_comments">
-                    <span class="blog_comments_msg">关于：目前有66 条留言</span>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
-                    </div>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
-                    </div>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
-                    </div>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
-                    </div>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
-                    </div>
-                    <div class="blog_comment">
-                        <span>
-                            <b>许寒</b>：发表于 2019年02月13日 20:49[回复]
-                        </span>
-                        <div>PHP是世界上最好的语言</div>
+                <div id="blogComment">
+                    <ul>
+                        
+                    </ul>
+                    <div class="addComment" id="addComment">
+                        <input type="hidden">
+                        <input type="text" placeholder="昵称"/>
+                        <input type="text" placeholder="邮箱"/>
+                        <textarea placeholder="无意义的内容我可能不会回复你"></textarea>
+                        <input type="text" placeholder="请在这里输入验证码"><span></span>
+                        <button @click="sendComment">提交留言</button>
                     </div>
                 </div>
             </div>
@@ -141,6 +104,7 @@
 import BHeader from '../components/index/header.vue';
 import BFooter from '../components/index/footer.vue';
 import { mapState } from 'vuex'
+
 export default {
     components: {
         BHeader,
@@ -150,6 +114,12 @@ export default {
         ...mapState(['randomTags'])
     },
     methods: {
+        /**
+         * 提交留言
+         */
+        sendComment(){
+            
+        },
         randomColor(){
             var red = Math.random() * 255;
             var green = Math.random() * 255;
@@ -164,5 +134,5 @@ export default {
 }
 </script>
 <style lang="less">
-    @import '../less/about.less';
+    @import '../less/guestbook.less';
 </style>

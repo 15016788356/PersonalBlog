@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: "MyIcon";
+    src: url('../assets/font/glyphicons-halflings-regular.woff2');
+}
+body {
+    position: relative;
+    background-image: url(https://www.zh30.com/wp-content/themes/zxthemes/images/bg.jpg);
+    text-align: center;
+    overflow-x: hidden;
+    a{
+        text-decoration: none;
+    }
+    .header {
+        width: 100%;
+        height: 50px;
+        background-color: #191818;
+        .container {
+            position: relative;
+            width: 1170px;
+            height: 50px;
+            /* background-color: #b8b8b9; */
+            margin: 0 auto;
+            .title {
+                /* display: inline-block; */
+                float: left;
+                /* overflow: hidden; */
+                color: #eeeeee;
+                line-height: 50px;
+                font-size: 18px;
+                margin: 0 15px;
+            }
+            .menu {
+                /* background-color: blue; */
+                float: left;
+                li{
+                    display: inline-block;
+                    height: 50px;
+                    width: 58px;
+                    color: #eee;
+                    font-size: 14px;
+                    line-height: 50px;
+                }
+            }            
+            .search_bar{
+                input{
+                    display: inline-block;
+                    position: absolute;
+                    height: 22px;
+                    padding: 5px 10px;
+                    border-radius: 8px;
+                    border: 1px solid #000;
+                    outline: none;
+                    font-size: 14px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 60px;
+                }
+                button{
+                    display: inline-block;
+                    position: absolute;
+                    width: 54px;
+                    height: 34px;
+                    padding: 5px 10px;
+                    top: 50%;
+                    border-radius: 8px;
+                    border: none;
+                    transform: translateY(-50%);
+                    outline: none;
+                    right: 0;
+                    color: #555;
+                }
+            }
+        }
+    }
+    .content {
+        display: inline-block;
+        position: relative;
+        width: 1170px;
+        margin: 30px auto 0 auto;
+        /* background-color: #fff; */        
+        .content_left {
+            float: left;
+            width: 66%;
+            padding: 0 20px 0 0;
+            box-sizing: border-box;
+        }
+        .content_right {
+            float: right;
+            width: 34%;
+            padding: 0;
+        }
+    }
+}
